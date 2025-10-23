@@ -29,11 +29,11 @@ export function Header() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b-4 border-primary/40 bg-background/95 backdrop-blur-sm">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-8">
+    <header className="fixed top-0 left-0 right-0 z-50 border-b-2 border-primary/60 bg-background/95 backdrop-blur-md shadow-lg">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
-            <span className="text-2xl font-bold tracking-tight hover-color-shift">
+            <span className="text-3xl font-bold tracking-tight bg-linear-to-r from-foreground to-primary bg-clip-text text-transparent">
               SCP<span className="text-primary">Tech</span>
             </span>
           </Link>
@@ -60,7 +60,7 @@ export function Header() {
               key={item.name}
               href={item.href}
               onClick={(e) => handleSmoothScroll(e, item.href)}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary hover-color-shift cursor-pointer"
+              className="text-base font-medium text-muted-foreground transition-all duration-300 hover:text-primary hover-color-shift cursor-pointer px-3 py-2 rounded-lg hover:bg-primary/10"
             >
               {item.name}
             </a>
