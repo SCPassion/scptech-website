@@ -13,7 +13,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "SCPTech - Web3 Technology Solutions",
+  title: "SCPTech - Web3 Technology",
   description: "Building the future of decentralized technology",
   generator: "v0.app",
 };
