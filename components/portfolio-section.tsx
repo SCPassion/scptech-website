@@ -17,7 +17,6 @@ export function PortfolioSection() {
     ],
     links: {
       github: "#",
-      linkedin: "#",
       twitter: "#",
     },
   };
@@ -52,12 +51,6 @@ export function PortfolioSection() {
                   className="rounded border-2 border-transparent p-1.5 text-muted-foreground transition-all hover:border-primary hover:text-primary"
                 >
                   <Github className="h-4 w-4" />
-                </a>
-                <a
-                  href={contributor.links.linkedin}
-                  className="rounded border-2 border-transparent p-1.5 text-muted-foreground transition-all hover:border-primary hover:text-primary"
-                >
-                  <Linkedin className="h-4 w-4" />
                 </a>
                 <a
                   href={contributor.links.twitter}
