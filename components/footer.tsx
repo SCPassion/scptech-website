@@ -12,9 +12,9 @@ export function Footer() {
             </span>
           </Link>
           <p className="mt-4 max-w-md text-lg leading-relaxed text-muted-foreground">
-            Building the infrastructure for tomorrow's decentralized world.
-            Creating innovative Web3 solutions that empower developers and users
-            globally.
+            Specializing in Web3 infrastructure, DeFi protocols, and blockchain
+            monitoring solutions. Building the future of decentralized
+            applications with modern technologies.
           </p>
           <div className="mt-6 flex gap-4">
             <a

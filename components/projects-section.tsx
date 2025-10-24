@@ -1,3 +1,5 @@
+"use client";
+
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
@@ -6,36 +8,44 @@ import Image from "next/image";
 export function ProjectsSection() {
   const projects = [
     {
-      title: "DeFi Protocol",
+      title: "Pyth Board",
       description:
-        "A decentralized finance protocol enabling seamless token swaps, liquidity provision, and yield farming across multiple chains.",
-      tags: ["Solidity", "React", "Web3.js"],
+        "A comprehensive dashboard for tracking Pyth Network OIS (Oracle Integrity Staking) staking statistics across multiple wallets with real-time analytics and performance monitoring.",
+      tags: ["TypeScript", "React", "Pyth Network"],
       status: "Active",
       image: "/defi-protocol-dashboard.png",
+      githubUrl: "https://github.com/SCPassion/pyth-board",
+      demoUrl: "https://pyth.scptech.xyz/",
     },
     {
-      title: "NFT Marketplace",
+      title: "Saga Portfolio",
       description:
-        "Next-generation NFT marketplace with gasless transactions, advanced filtering, and creator royalty management.",
-      tags: ["TypeScript", "Next.js", "IPFS"],
-      status: "Beta",
+        "A mock portfolio inspection site for Saga Uniswap chainlet, providing AMM monitoring and portfolio analytics for the Saga blockchain ecosystem.",
+      tags: ["JavaScript", "Saga", "AMM"],
+      status: "Active",
       image: "/nft-marketplace-interface.png",
+      githubUrl: "https://github.com/SCPassion/saga-profolio",
+      demoUrl: "#",
     },
     {
-      title: "DAO Governance",
+      title: "Ecommerce App",
       description:
-        "Comprehensive DAO governance platform with proposal creation, voting mechanisms, and treasury management.",
-      tags: ["Rust", "Solana", "React"],
+        "A modern ecommerce web application built with Next.js, TypeScript, and Tailwind CSS, showcasing full-stack development capabilities and modern web technologies.",
+      tags: ["TypeScript", "Next.js", "Tailwind CSS"],
       status: "Active",
       image: "/dao-governance-platform.jpg",
+      githubUrl: "https://github.com/SCPassion/ecommerce-app",
+      demoUrl: "#",
     },
     {
-      title: "Cross-Chain Bridge",
+      title: "VanLife",
       description:
-        "Secure and efficient cross-chain bridge enabling asset transfers between Ethereum, Polygon, and BSC networks.",
-      tags: ["Solidity", "Node.js", "GraphQL"],
-      status: "Development",
+        "VanLife is a modern web application designed to provide users with a seamless experience for exploring and renting vans, featuring responsive design and user-friendly interface.",
+      tags: ["JavaScript", "React", "CSS"],
+      status: "Active",
       image: "/blockchain-bridge-network.jpg",
+      githubUrl: "https://github.com/SCPassion/vanlife",
+      demoUrl: "#",
     },
   ];
 
@@ -47,7 +57,7 @@ export function ProjectsSection() {
             Our Projects
           </h2>
           <p className="mt-4 text-pretty text-xl text-muted-foreground">
-            Innovative solutions powering the decentralized ecosystem
+            Web3 monitoring tools and blockchain infrastructure solutions
           </p>
         </div>
 
@@ -91,6 +101,7 @@ export function ProjectsSection() {
                     size="lg"
                     variant="outline"
                     className="flex-1 border-2 font-bold modern-shadow hover-color-shift transition-all bg-transparent"
+                    onClick={() => window.open(project.githubUrl, "_blank")}
                   >
                     <Github className="mr-2 h-5 w-5" />
                     View Code
@@ -98,6 +109,7 @@ export function ProjectsSection() {
                   <Button
                     size="lg"
                     className="flex-1 border-2 border-primary font-bold modern-shadow hover-color-shift transition-all"
+                    onClick={() => window.open(project.demoUrl, "_blank")}
                   >
                     <ExternalLink className="mr-2 h-5 w-5" />
                     Live Demo
