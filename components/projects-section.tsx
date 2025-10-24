@@ -87,7 +87,7 @@ export function ProjectsSection() {
                 <p className="mb-4 text-lg leading-relaxed text-muted-foreground">
                   {project.description}
                 </p>
-                <div className="mb-4 flex flex-wrap gap-2">
+                <div className="mb-4 flex flex-wrap gap-2 justify-center">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}

@@ -72,7 +72,7 @@ export function PortfolioSection() {
               {contributor.bio}
             </p>
 
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 justify-center">
               {contributor.skills.map((skill) => (
                 <span
                   key={skill}
