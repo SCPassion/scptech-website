@@ -29,18 +29,6 @@ export function Footer() {
             >
               <Twitter className="h-5 w-5" />
             </a>
-            <a
-              href="#"
-              className="rounded-md p-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
-            >
-              <Linkedin className="h-5 w-5" />
-            </a>
-            <a
-              href="#"
-              className="rounded-md p-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
-            >
-              <Mail className="h-5 w-5" />
-            </a>
           </div>
         </div>
 
