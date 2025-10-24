@@ -113,7 +113,7 @@ export function ProjectsSection() {
                     onClick={() => window.open(project.demoUrl, "_blank")}
                   >
                     <ExternalLink className="mr-2 h-5 w-5" />
-                    Live Demo
+                    Live Now
                   </Button>
                 </div>
               </div>
