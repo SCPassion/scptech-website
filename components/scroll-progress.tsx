@@ -47,7 +47,7 @@ export function ScrollProgress() {
   return (
     <div className="fixed top-[68px] left-0 right-0 z-40 h-3 bg-primary/10 backdrop-blur-sm">
       <div
-        className="h-full bg-gradient-to-r from-primary via-primary/80 to-accent transition-all duration-300 ease-out will-change-transform"
+        className="h-full bg-linear-to-r from-primary via-primary/80 to-accent transition-all duration-300 ease-out will-change-transform"
         style={{
           width: `${scrollProgress}%`,
           transform: "translateZ(0)", // Force hardware acceleration
