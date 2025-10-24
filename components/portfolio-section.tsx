@@ -6,18 +6,19 @@ export function PortfolioSection() {
   const contributor = {
     name: "SCP",
     role: "Creator of SCPTech, Pythenian & Pyth Priest",
-    bio: "Full-Stack Developer specializing in modern web technologies and Web3 solutions. Building the future of decentralized applications.",
-    avatar: "/professional-developer-portrait.png",
+    bio: "Full-Stack Developer specializing in Typescript ecosystem.",
+    avatar: "/pythenianNFT.jpg",
     skills: [
       "React.js",
       "Next.js",
       "TypeScript",
       "Tailwind CSS",
+      "Convex",
       "Full-Stack Development",
     ],
     links: {
-      github: "#",
-      twitter: "#",
+      github: "https://github.com/SCPassion",
+      twitter: "https://x.com/KaiCryptohk",
     },
   };
 
@@ -48,12 +49,14 @@ export function PortfolioSection() {
               <div className="flex gap-2">
                 <a
                   href={contributor.links.github}
+                  target="_blank"
                   className="rounded border-2 border-transparent p-1.5 text-muted-foreground transition-all hover:border-primary hover:text-primary"
                 >
                   <Github className="h-4 w-4" />
                 </a>
                 <a
                   href={contributor.links.twitter}
+                  target="_blank"
                   className="rounded border-2 border-transparent p-1.5 text-muted-foreground transition-all hover:border-primary hover:text-primary"
                 >
                   <Twitter className="h-4 w-4" />

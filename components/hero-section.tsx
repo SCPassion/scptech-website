@@ -57,13 +57,6 @@ export function HeroSection() {
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
             </a>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 font-bold text-base modern-shadow hover-color-shift transition-all bg-transparent"
-            >
-              View Documentation
-            </Button>
           </div>
         </div>
 

@@ -11,7 +11,7 @@ export function Header() {
   const navItems = [
     { name: "Why SCPTech", href: "#why-scptech" },
     { name: "Projects", href: "#projects" },
-    { name: "Contributor's Portfolio", href: "#portfolio" },
+    { name: "Contributor", href: "#portfolio" },
     { name: "FAQ", href: "#faq" },
   ];
 

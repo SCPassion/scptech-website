@@ -18,13 +18,15 @@ export function Footer() {
           </p>
           <div className="mt-6 flex gap-4">
             <a
-              href="#"
+              href="https://github.com/SCPassion"
+              target="_blank"
               className="rounded-md p-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
             >
               <Github className="h-5 w-5" />
             </a>
             <a
-              href="#"
+              href="https://x.com/KaiCryptohk"
+              target="_blank"
               className="rounded-md p-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
             >
               <Twitter className="h-5 w-5" />
