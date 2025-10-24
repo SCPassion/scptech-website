@@ -30,7 +30,7 @@ export function Header() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-primary/30 bg-gradient-to-r from-background/20 via-background/30 to-background/20 backdrop-blur-xl shadow-lg hover:shadow-xl transition-all duration-500">
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-primary/30 bg-linear-to-r from-background/20 via-background/30 to-background/20 backdrop-blur-xl shadow-lg hover:shadow-xl transition-all duration-500">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         <div className="flex lg:flex-1 items-center">
           <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-3">
@@ -41,7 +41,7 @@ export function Header() {
               height={40}
               className="rounded-lg hover:scale-110 hover:rotate-3 transition-all duration-300 shadow-lg hover:shadow-primary/20"
             />
-            <span className="text-3xl font-bold tracking-tight bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent animate-pulse hover:animate-none hover:bg-gradient-to-r hover:from-primary hover:via-accent hover:to-primary hover:scale-105 transition-all duration-500 cursor-pointer">
+            <span className="text-3xl font-bold tracking-tight bg-linear-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent animate-pulse hover:animate-none hover:bg-linear-to-r hover:from-primary hover:via-accent hover:to-primary hover:scale-105 transition-all duration-500 cursor-pointer">
               SCP
               <span className="text-primary animate-bounce hover:animate-spin hover:text-accent transition-all duration-500">
                 Tech
@@ -71,7 +71,7 @@ export function Header() {
               key={item.name}
               href={item.href}
               onClick={(e) => handleSmoothScroll(e, item.href)}
-              className="text-base font-medium text-muted-foreground transition-all duration-300 hover:text-primary hover:scale-105 hover:bg-gradient-to-r hover:from-primary/10 hover:to-accent/10 hover:border-2 hover:border-primary/50 cursor-pointer px-3 py-2 rounded-lg border border-transparent hover:shadow-lg hover:shadow-primary/20"
+              className="text-base font-medium text-muted-foreground transition-all duration-300 hover:text-primary hover:scale-105 hover:bg-linear-to-r hover:from-primary/10 hover:to-accent/10 hover:border-2 hover:border-primary/50 cursor-pointer px-3 py-2 rounded-lg border border-transparent hover:shadow-lg hover:shadow-primary/20"
             >
               {item.name}
             </a>
@@ -88,7 +88,7 @@ export function Header() {
         }`}
       >
         <div
-          className={`space-y-1 px-6 pb-4 pt-2 bg-gradient-to-b from-background/95 to-background/90 backdrop-blur-sm transition-all duration-300 ${
+          className={`space-y-1 px-6 pb-4 pt-2 bg-linear-to-b from-background/95 to-background/90 backdrop-blur-sm transition-all duration-300 ${
             mobileMenuOpen
               ? "transform translate-y-0"
               : "transform -translate-y-4"
@@ -102,7 +102,7 @@ export function Header() {
                 handleSmoothScroll(e, item.href);
                 setMobileMenuOpen(false);
               }}
-              className={`block rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-gradient-to-r hover:from-primary/10 hover:to-accent/10 hover:text-primary hover:scale-105 hover:border-2 hover:border-primary/50 transition-all duration-500 cursor-pointer transform ${
+              className={`block rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-linear-to-r hover:from-primary/10 hover:to-accent/10 hover:text-primary hover:scale-105 hover:border-2 hover:border-primary/50 transition-all duration-500 cursor-pointer transform ${
                 mobileMenuOpen
                   ? "translate-x-0 translate-y-0 opacity-100 scale-100"
                   : "translate-x-8 translate-y-2 opacity-0 scale-95"
