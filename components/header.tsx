@@ -30,7 +30,7 @@ export function Header() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b-2 border-primary/60 bg-background/95 backdrop-blur-md shadow-lg">
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-primary/30 bg-background/20 backdrop-blur-xl shadow-lg">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         <div className="flex lg:flex-1 items-center">
           <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-3">
