@@ -101,7 +101,7 @@ export function ProjectsSection() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="flex-1 border-2 font-bold modern-shadow hover-color-shift transition-all bg-transparent"
+                    className="flex-1 border-2 font-bold modern-shadow hover-color-shift transition-all bg-transparent cursor-pointer"
                     onClick={() => window.open(project.githubUrl, "_blank")}
                   >
                     <Github className="mr-2 h-5 w-5" />
@@ -109,7 +109,7 @@ export function ProjectsSection() {
                   </Button>
                   <Button
                     size="lg"
-                    className="flex-1 border-2 border-primary font-bold modern-shadow hover-color-shift transition-all"
+                    className="flex-1 border-2 border-primary font-bold modern-shadow hover-color-shift transition-all cursor-pointer"
                     onClick={() => window.open(project.demoUrl, "_blank")}
                   >
                     <ExternalLink className="mr-2 h-5 w-5" />

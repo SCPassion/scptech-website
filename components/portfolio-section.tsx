@@ -50,14 +50,14 @@ export function PortfolioSection() {
                 <a
                   href={contributor.links.github}
                   target="_blank"
-                  className="rounded border-2 border-transparent p-1.5 text-muted-foreground transition-all hover:border-primary hover:text-primary"
+                  className="rounded border-2 border-transparent p-1.5 text-muted-foreground transition-all hover:border-primary hover:text-primary cursor-pointer"
                 >
                   <Github className="h-4 w-4" />
                 </a>
                 <a
                   href={contributor.links.twitter}
                   target="_blank"
-                  className="rounded border-2 border-transparent p-1.5 text-muted-foreground transition-all hover:border-primary hover:text-primary"
+                  className="rounded border-2 border-transparent p-1.5 text-muted-foreground transition-all hover:border-primary hover:text-primary cursor-pointer"
                 >
                   <Twitter className="h-4 w-4" />
                 </a>

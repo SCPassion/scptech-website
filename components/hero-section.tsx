@@ -48,11 +48,11 @@ export function HeroSection() {
             <a
               href="#projects"
               onClick={(e) => handleSmoothScroll(e, "#projects")}
-              className="inline-block"
+              className="inline-block cursor-pointer"
             >
               <Button
                 size="lg"
-                className="group border-2 border-primary font-bold text-base modern-shadow hover-color-shift transition-all"
+                className="group border-2 border-primary font-bold text-base modern-shadow hover-color-shift transition-all cursor-pointer"
               >
                 Explore Our Tools
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />

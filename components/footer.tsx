@@ -20,14 +20,14 @@ export function Footer() {
             <a
               href="https://github.com/SCPassion"
               target="_blank"
-              className="rounded-md p-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+              className="rounded-md p-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground cursor-pointer"
             >
               <Github className="h-5 w-5" />
             </a>
             <a
               href="https://x.com/KaiCryptohk"
               target="_blank"
-              className="rounded-md p-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+              className="rounded-md p-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground cursor-pointer"
             >
               <Twitter className="h-5 w-5" />
             </a>

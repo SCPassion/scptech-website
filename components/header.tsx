@@ -53,7 +53,7 @@ export function Header() {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-foreground hover:bg-primary/10 hover:scale-110 transition-all duration-300"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-foreground hover:bg-primary/10 hover:scale-110 transition-all duration-300 cursor-pointer"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <span className="sr-only">Toggle menu</span>
