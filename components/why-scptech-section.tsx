@@ -34,7 +34,7 @@ export function WhySCPTechSection() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-balance text-xl font-bold tracking-tight sm:text-2xl lg:text-3xl leading-relaxed">
-            Why Choose SCPTech?
+            Why SCPTech?
           </h2>
           <p className="mt-4 text-pretty text-lg text-muted-foreground leading-relaxed">
             Specialized Web3 monitoring and analytics tools for blockchain

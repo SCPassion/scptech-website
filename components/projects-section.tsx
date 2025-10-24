@@ -54,10 +54,11 @@ export function ProjectsSection() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-balance text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
-            Our Projects
+            Our Tools & Projects
           </h2>
           <p className="mt-4 text-pretty text-xl text-muted-foreground">
-            Web3 monitoring tools and blockchain infrastructure solutions
+            Web3 monitoring tools, DeFi protocols, and blockchain infrastructure
+            solutions
           </p>
         </div>
 
