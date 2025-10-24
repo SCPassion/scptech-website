@@ -71,7 +71,7 @@ export function Header() {
               key={item.name}
               href={item.href}
               onClick={(e) => handleSmoothScroll(e, item.href)}
-              className="text-base font-medium text-muted-foreground transition-all duration-300 hover:text-primary hover:scale-105 hover:bg-linear-to-r hover:from-primary/10 hover:to-accent/10 hover:border-2 hover:border-primary/50 cursor-pointer px-3 py-2 rounded-lg border border-transparent hover:shadow-lg hover:shadow-primary/20"
+              className="text-base font-medium text-foreground/80 transition-all duration-300 hover:text-primary hover:scale-105 hover:bg-linear-to-r hover:from-primary/10 hover:to-accent/10 hover:border-2 hover:border-primary/50 cursor-pointer px-3 py-2 rounded-lg border border-transparent hover:shadow-lg hover:shadow-primary/20"
             >
               {item.name}
             </a>
@@ -102,7 +102,7 @@ export function Header() {
                 handleSmoothScroll(e, item.href);
                 setMobileMenuOpen(false);
               }}
-              className={`block rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-linear-to-r hover:from-primary/10 hover:to-accent/10 hover:text-primary hover:scale-105 hover:border-2 hover:border-primary/50 transition-all duration-500 cursor-pointer transform ${
+              className={`block rounded-lg px-3 py-2 text-sm font-medium text-foreground/80 hover:bg-linear-to-r hover:from-primary/10 hover:to-accent/10 hover:text-primary hover:scale-105 hover:border-2 hover:border-primary/50 transition-all duration-500 cursor-pointer transform ${
                 mobileMenuOpen
                   ? "translate-x-0 translate-y-0 opacity-100 scale-100"
                   : "translate-x-8 translate-y-2 opacity-0 scale-95"
