@@ -6,7 +6,7 @@ export function PortfolioSection() {
   const contributor = {
     name: "SCP",
     role: "Creator of SCPTech, Pythenian & Pyth Priest",
-    bio: "Full-Stack Developer specializing in Typescript ecosystem.",
+    bio: "Full-Stack Developer specializing in Web3 monitoring tools, Oracle Integrity Staking dashboards, and blockchain infrastructure. Building anywhere, anyplace, anytime!",
     avatar: "/pythenianNFT.jpg",
     skills: [
       "React.js",
@@ -27,10 +27,10 @@ export function PortfolioSection() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-balance text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
-            Contributor's Portfolio
+            Founder & Developer
           </h2>
           <p className="mt-4 text-pretty text-xl text-muted-foreground">
-            Meet the creator building the future of Web3
+            Meet the developer behind SCPTech's Web3 monitoring tools
           </p>
         </div>
 
