@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Code2, Blocks, Zap } from "lucide-react";
-import Image from "next/image";
 
 const handleSmoothScroll = (
   e: React.MouseEvent<HTMLAnchorElement>,
@@ -21,17 +20,8 @@ const handleSmoothScroll = (
 export function HeroSection() {
   return (
     <section className="relative overflow-hidden pt-32 pb-20 lg:pt-40 lg:pb-32">
-      {/* Pixel art background landscape */}
-      <div className="absolute inset-0 -z-10">
-        <Image
-          src="/pixel-landscape.jpg"
-          alt=""
-          fill
-          className="object-cover pixelated opacity-20"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
-      </div>
+      {/* Beautiful radial gradient background */}
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(45%_35%_at_50%_50%,oklch(0.2_0.12_280)_0%,transparent_100%)]" />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
@@ -78,7 +68,7 @@ export function HeroSection() {
         </div>
 
         <div className="mt-20 grid grid-cols-1 gap-8 sm:grid-cols-3">
-          <div className="flex flex-col items-center text-center border-2 border-primary/20 rounded-lg p-6 bg-card modern-shadow hover-color-shift transition-all">
+          <div className="flex flex-col items-center text-center border-2 border-primary/20 rounded-lg p-6 bg-transparent modern-shadow hover-color-shift transition-all">
             <div className="mb-4 rounded-lg border-2 border-primary bg-primary/10 p-4 hover-color-shift">
               <Code2 className="h-8 w-8 text-primary" />
             </div>
@@ -88,7 +78,7 @@ export function HeroSection() {
             </p>
           </div>
 
-          <div className="flex flex-col items-center text-center border-2 border-accent/20 rounded-lg p-6 bg-card modern-shadow hover-color-shift transition-all">
+          <div className="flex flex-col items-center text-center border-2 border-accent/20 rounded-lg p-6 bg-transparent modern-shadow hover-color-shift transition-all">
             <div className="mb-4 rounded-lg border-2 border-accent bg-accent/10 p-4 hover-color-shift">
               <Blocks className="h-8 w-8 text-accent" />
             </div>
@@ -98,7 +88,7 @@ export function HeroSection() {
             </p>
           </div>
 
-          <div className="flex flex-col items-center text-center border-2 border-primary/20 rounded-lg p-6 bg-card modern-shadow hover-color-shift transition-all">
+          <div className="flex flex-col items-center text-center border-2 border-primary/20 rounded-lg p-6 bg-transparent modern-shadow hover-color-shift transition-all">
             <div className="mb-4 rounded-lg border-2 border-primary bg-primary/10 p-4 hover-color-shift">
               <Zap className="h-8 w-8 text-primary" />
             </div>
