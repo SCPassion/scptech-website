@@ -1,31 +1,31 @@
 import { Card } from "@/components/ui/card";
-import { Shield, Users, Rocket, Globe } from "lucide-react";
+import { BarChart3, Zap, Network, Monitor } from "lucide-react";
 
 export function WhySCPTechSection() {
   const features = [
     {
-      icon: Shield,
-      title: "Security First",
+      icon: BarChart3,
+      title: "Advanced Analytics",
       description:
-        "Built with security at the core, utilizing industry-leading practices and audited smart contracts to ensure your assets are protected.",
+        "Comprehensive monitoring dashboards for Oracle Integrity Staking, providing real-time insights into staking performance across multiple wallets.",
     },
     {
-      icon: Users,
-      title: "Community Driven",
+      icon: Monitor,
+      title: "Custom Monitoring Tools",
       description:
-        "Powered by a global community of developers, contributors, and enthusiasts working together to shape the future of Web3.",
+        "Specialized blockchain infrastructure tools for Pyth Network, Saga ecosystem, and emerging Web3 protocols with tailored analytics.",
     },
     {
-      icon: Rocket,
-      title: "Innovation Focus",
+      icon: Network,
+      title: "Multi-Ecosystem Support",
       description:
-        "Constantly pushing boundaries with cutting-edge research and development in blockchain technology and decentralized systems.",
+        "Building tools that work seamlessly across different blockchain networks, from Solana to Cosmos and beyond.",
     },
     {
-      icon: Globe,
-      title: "Global Impact",
+      icon: Zap,
+      title: "Real-Time Performance",
       description:
-        "Creating solutions that transcend borders, enabling financial inclusion and technological empowerment worldwide.",
+        "High-performance monitoring solutions with low-latency data feeds and instant updates for critical DeFi operations.",
     },
   ];
 
@@ -37,7 +37,8 @@ export function WhySCPTechSection() {
             Why Choose SCPTech?
           </h2>
           <p className="mt-4 text-pretty text-lg text-muted-foreground leading-relaxed">
-            We're building the infrastructure for tomorrow's decentralized world
+            Specialized Web3 monitoring and analytics tools for blockchain
+            ecosystems
           </p>
         </div>
 

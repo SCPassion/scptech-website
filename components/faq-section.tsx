@@ -10,32 +10,27 @@ export function FAQSection() {
     {
       question: "What is SCPTech?",
       answer:
-        "SCPTech is a Web3 technology entity focused on building innovative blockchain solutions, decentralized applications, and infrastructure for the next generation of the internet. We specialize in DeFi protocols, NFT platforms, DAO governance, and cross-chain solutions.",
+        "SCPTech is a Web3 technology entity specializing in monitoring dashboards, Oracle Integrity Staking analytics, and blockchain infrastructure tools. We build custom solutions for Pyth Network, Saga ecosystem, and other blockchain protocols to provide real-time insights and performance tracking.",
+    },
+    {
+      question: "What monitoring tools does SCPTech offer?",
+      answer:
+        "We develop comprehensive dashboards for Oracle Integrity Staking tracking, PythenianNFT partnership monitoring, and AMM protocol analytics. Our tools provide real-time insights into staking performance, wallet statistics, and blockchain ecosystem health across multiple networks.",
+    },
+    {
+      question: "Which blockchain ecosystems does SCPTech support?",
+      answer:
+        "We specialize in Pyth Network oracle solutions, Saga blockchain tools, and multi-ecosystem support. Our monitoring tools work across Solana, Cosmos, and other emerging blockchain networks, providing cross-chain analytics and performance tracking.",
+    },
+    {
+      question: "How accurate are your monitoring dashboards?",
+      answer:
+        "Our dashboards provide real-time data with high accuracy and low latency. We use direct blockchain data sources and implement robust error handling to ensure reliable monitoring for critical DeFi operations and staking activities.",
     },
     {
       question: "How can I contribute to SCPTech projects?",
       answer:
-        'We welcome contributions from developers of all skill levels! You can start by exploring our open-source repositories on GitHub, joining our Discord community, and checking out our contribution guidelines. We have issues labeled "good first issue" for newcomers.',
-    },
-    {
-      question: "What blockchain networks does SCPTech support?",
-      answer:
-        "We build on multiple blockchain networks including Ethereum, Polygon, Binance Smart Chain, Solana, and other EVM-compatible chains. Our cross-chain solutions enable seamless interoperability between these networks.",
-    },
-    {
-      question: "Are your smart contracts audited?",
-      answer:
-        "Yes, security is our top priority. All our production smart contracts undergo rigorous internal reviews and third-party security audits by reputable firms. Audit reports are publicly available in our documentation.",
-    },
-    {
-      question: "How do I get started with Web3 development?",
-      answer:
-        "We provide comprehensive documentation, tutorials, and starter templates to help you begin your Web3 journey. Check out our developer resources section for guides on smart contract development, dApp creation, and blockchain integration.",
-    },
-    {
-      question: "Does SCPTech offer consulting services?",
-      answer:
-        "Yes, we offer consulting services for organizations looking to integrate blockchain technology, build custom DeFi solutions, or develop NFT platforms. Contact us through our website to discuss your project requirements.",
+        "We welcome contributions from developers of all skill levels! You can start by exploring our open-source repositories on GitHub.",
     },
   ];
 
