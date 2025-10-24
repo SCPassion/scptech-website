@@ -54,7 +54,7 @@ export function HeroSection() {
                 size="lg"
                 className="group border-2 border-primary font-bold text-base modern-shadow hover-color-shift transition-all cursor-pointer"
               >
-                Explore Our Tools
+                Explore Our Projects & Tools
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
             </a>
