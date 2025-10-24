@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 export function Header() {
@@ -31,8 +32,15 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b-2 border-primary/60 bg-background/95 backdrop-blur-md shadow-lg">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-        <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5">
+        <div className="flex lg:flex-1 items-center">
+          <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-3">
+            <Image
+              src="/SCP1.jpg"
+              alt="SCPTech Logo"
+              width={40}
+              height={40}
+              className="rounded-lg"
+            />
             <span className="text-3xl font-bold tracking-tight bg-linear-to-r from-foreground to-primary bg-clip-text text-transparent">
               SCP<span className="text-primary">Tech</span>
             </span>
