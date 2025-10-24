@@ -32,7 +32,7 @@ export function HeroSection() {
 
           <h1 className="text-balance text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl leading-tight">
             Decentralized Technology{" "}
-            <span className="text-primary hover-color-shift inline-block">
+            <span className="text-primary hover-color-shift inline-block hover:border-2 hover:border-primary hover:rounded-lg hover:px-3 hover:py-1 transition-all duration-300">
               Solutions
             </span>
           </h1>
