@@ -27,21 +27,21 @@ export function HeroSection() {
         <div className="mx-auto max-w-3xl text-center">
           <div className="mb-8 inline-flex items-center gap-2 rounded-lg border-2 border-primary bg-primary/10 px-4 py-2 text-sm font-bold text-primary modern-shadow hover-color-shift">
             <Zap className="h-4 w-4" />
-            <span>Web3 Monitoring & Analytics</span>
+            <span>Pyth Network & Fogo Chain Focused Builder</span>
           </div>
 
           <h1 className="text-balance text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl leading-tight">
-            Specialized Tools for{" "}
+            Building for{" "}
             <span className="text-primary hover-color-shift inline-block hover:border-2 hover:border-primary hover:rounded-lg hover:px-3 hover:py-1 transition-all duration-300">
-              Blockchain Ecosystems
+              Pyth, Fogo, and High-Performance Web3
             </span>
           </h1>
 
           <p className="mt-6 text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
-            SCPTech develops custom monitoring dashboards, staking analytics,
-            and blockchain infrastructure tools for Web3 protocols, with
-            expertise in oracle networks, DeFi protocols, and emerging
-            blockchain ecosystems.
+            SCPTech develops monitoring dashboards and analytics for oracle and
+            staking ecosystems, with a strong focus on Pyth Network and Fogo
+            Chain. Background includes former Saga Chain ambassadorship and
+            prior contribution to NodeStake validator operations.
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -54,7 +54,7 @@ export function HeroSection() {
                 size="lg"
                 className="group border-2 border-primary font-bold text-base modern-shadow hover-color-shift transition-all cursor-pointer"
               >
-                Explore Our Projects & Tools
+                Explore Latest GitHub Builds
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
             </a>
@@ -68,8 +68,8 @@ export function HeroSection() {
             </div>
             <h3 className="text-base font-bold">Monitoring Dashboards</h3>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              Custom analytics and tracking tools for staking, partnerships, and
-              protocol performance
+              Oracle and staking analytics focused on actionable signal, wallet
+              performance, and ecosystem health.
             </p>
           </div>
 
@@ -79,8 +79,8 @@ export function HeroSection() {
             </div>
             <h3 className="text-base font-bold">Blockchain Infrastructure</h3>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              Specialized tools for oracle networks, AMM protocols, and emerging
-              blockchain ecosystems
+              Specialized tools for Pyth Network, Fogo Chain, and protocol
+              teams needing reliable onchain monitoring.
             </p>
           </div>
 
@@ -88,10 +88,10 @@ export function HeroSection() {
             <div className="mb-4 rounded-lg border-2 border-primary bg-primary/10 p-4 hover-color-shift">
               <Zap className="h-8 w-8 text-primary" />
             </div>
-            <h3 className="text-base font-bold">Multi-Ecosystem Support</h3>
+            <h3 className="text-base font-bold">Ecosystem Experience</h3>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              Building tools that work across different blockchain networks and
-              Web3 protocols
+              Former Saga Chain ambassador and ex-contributor to NodeStake
+              validator, with practical cross-ecosystem context.
             </p>
           </div>
         </div>

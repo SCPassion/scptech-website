@@ -1,25 +1,31 @@
 import { Card } from "@/components/ui/card";
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Twitter } from "lucide-react";
 import Image from "next/image";
+import type { GithubProfile } from "@/lib/github";
 
-export function PortfolioSection() {
+type PortfolioSectionProps = {
+  profile: GithubProfile;
+};
+
+export function PortfolioSection({ profile }: PortfolioSectionProps) {
   const contributor = {
-    name: "SCP",
-    role: "Creator of SCPTech, Pythenian & Pyth Priest",
-    bio: "Full-Stack Developer specializing in Web3 monitoring tools, Oracle Integrity Staking dashboards, and blockchain infrastructure. Building anywhere, anyplace, anytime!",
-    avatar: "/pythenianNFT.jpg",
+    name: profile.name,
+    role: "Pyth Network & Fogo Chain Maxi",
+    bio: profile.bio,
+    avatar: profile.avatarUrl,
     skills: [
       "React.js",
       "Next.js",
       "TypeScript",
       "Tailwind CSS",
-      "Convex",
-      "Full-Stack Development",
+      "Web3 Development",
+      `${profile.publicRepos}+ Public Repos`,
     ],
     links: {
-      github: "https://github.com/SCPassion",
-      twitter: "https://x.com/KaiCryptohk",
+      github: profile.githubUrl,
+      twitter: profile.twitterUrl,
     },
+    stats: `${profile.followers} followers • Former Saga ambassador • Ex NodeStake contributor`,
   };
 
   return (
@@ -50,17 +56,21 @@ export function PortfolioSection() {
                 <a
                   href={contributor.links.github}
                   target="_blank"
+                  rel="noreferrer"
                   className="rounded border-2 border-transparent p-1.5 text-muted-foreground transition-all hover:border-primary hover:text-primary cursor-pointer"
                 >
                   <Github className="h-4 w-4" />
                 </a>
-                <a
-                  href={contributor.links.twitter}
-                  target="_blank"
-                  className="rounded border-2 border-transparent p-1.5 text-muted-foreground transition-all hover:border-primary hover:text-primary cursor-pointer"
-                >
-                  <Twitter className="h-4 w-4" />
-                </a>
+                {contributor.links.twitter ? (
+                  <a
+                    href={contributor.links.twitter}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="rounded border-2 border-transparent p-1.5 text-muted-foreground transition-all hover:border-primary hover:text-primary cursor-pointer"
+                  >
+                    <Twitter className="h-4 w-4" />
+                  </a>
+                ) : null}
               </div>
             </div>
 
@@ -70,6 +80,9 @@ export function PortfolioSection() {
             </p>
             <p className="mb-4 text-base leading-relaxed text-muted-foreground">
               {contributor.bio}
+            </p>
+            <p className="mb-4 text-sm font-medium text-primary">
+              {contributor.stats}
             </p>
 
             <div className="flex flex-wrap gap-2 justify-center">

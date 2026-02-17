@@ -5,21 +5,21 @@ export function WhySCPTechSection() {
   const features = [
     {
       icon: BarChart3,
-      title: "Advanced Analytics",
+      title: "Pyth-First Analytics",
       description:
-        "Comprehensive monitoring dashboards for Oracle Integrity Staking, providing real-time insights into staking performance across multiple wallets.",
+        "Monitoring dashboards for Pyth staking and oracle integrity, with real-time visibility into wallet and reserve performance.",
     },
     {
       icon: Monitor,
-      title: "Custom Monitoring Tools",
+      title: "Fogo Chain Focus",
       description:
-        "Specialized blockchain infrastructure tools for Pyth Network, Saga ecosystem, and emerging Web3 protocols with tailored analytics.",
+        "Custom dashboards and tooling tailored for Fogo Chain builders and communities that need clear onchain signal.",
     },
     {
       icon: Network,
-      title: "Multi-Ecosystem Support",
+      title: "Ecosystem Context",
       description:
-        "Building tools that work seamlessly across different blockchain networks, from Solana to Cosmos and beyond.",
+        "Experience spans former Saga Chain ambassadorship and ex-contributor work with NodeStake validator operations.",
     },
     {
       icon: Zap,
@@ -37,8 +37,8 @@ export function WhySCPTechSection() {
             Why SCPTech?
           </h2>
           <p className="mt-4 text-pretty text-lg text-muted-foreground leading-relaxed">
-            Specialized Web3 monitoring and analytics tools for blockchain
-            ecosystems
+            A Pyth Network and Fogo Chain maxi building practical tools for
+            serious onchain operators
           </p>
         </div>
 
