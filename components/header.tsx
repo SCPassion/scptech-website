@@ -1,12 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>("#why-scptech");
 
   const navItems = [
     { name: "Why SCPTech", href: "#why-scptech" },
@@ -20,6 +21,7 @@ export function Header() {
     href: string
   ) => {
     e.preventDefault();
+    setActiveSection(href);
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({
@@ -28,6 +30,39 @@ export function Header() {
       });
     }
   };
+
+  useEffect(() => {
+    const sectionIds = navItems.map((item) => item.href.replace("#", ""));
+    const sections = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter((section): section is HTMLElement => section !== null);
+
+    if (sections.length === 0) {
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+        if (visible.length > 0) {
+          setActiveSection(`#${visible[0].target.id}`);
+        }
+      },
+      {
+        rootMargin: "-40% 0px -45% 0px",
+        threshold: [0.1, 0.25, 0.5, 0.75],
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-primary/30 bg-linear-to-r from-background/20 via-background/30 to-background/20 backdrop-blur-xl shadow-lg hover:shadow-xl transition-all duration-500">
@@ -71,7 +106,11 @@ export function Header() {
               key={item.name}
               href={item.href}
               onClick={(e) => handleSmoothScroll(e, item.href)}
-              className="text-base font-medium text-foreground/80 transition-all duration-300 hover:text-primary hover:scale-105 hover:bg-linear-to-r hover:from-primary/10 hover:to-accent/10 hover:border-2 hover:border-primary/50 cursor-pointer px-3 py-2 rounded-lg border border-transparent hover:shadow-lg hover:shadow-primary/20"
+              className={`text-base font-medium transition-all duration-300 hover:text-primary hover:scale-105 hover:bg-linear-to-r hover:from-primary/10 hover:to-accent/10 hover:border-2 hover:border-primary/50 cursor-pointer px-3 py-2 rounded-lg border hover:shadow-lg hover:shadow-primary/20 ${
+                activeSection === item.href
+                  ? "text-primary border-primary/60 bg-linear-to-r from-primary/15 to-accent/15"
+                  : "text-foreground/80 border-transparent"
+              }`}
             >
               {item.name}
             </a>
@@ -102,7 +141,11 @@ export function Header() {
                 handleSmoothScroll(e, item.href);
                 setMobileMenuOpen(false);
               }}
-              className={`block rounded-lg px-3 py-2 text-sm font-medium text-foreground/80 hover:bg-linear-to-r hover:from-primary/10 hover:to-accent/10 hover:text-primary hover:scale-105 hover:border-2 hover:border-primary/50 transition-all duration-500 cursor-pointer transform ${
+              className={`block rounded-lg px-3 py-2 text-sm font-medium hover:bg-linear-to-r hover:from-primary/10 hover:to-accent/10 hover:text-primary hover:scale-105 hover:border-2 hover:border-primary/50 transition-all duration-500 cursor-pointer transform ${
+                activeSection === item.href
+                  ? "text-primary border border-primary/60 bg-linear-to-r from-primary/15 to-accent/15"
+                  : "text-foreground/80 border border-transparent"
+              } ${
                 mobileMenuOpen
                   ? "translate-x-0 translate-y-0 opacity-100 scale-100"
                   : "translate-x-8 translate-y-2 opacity-0 scale-95"
