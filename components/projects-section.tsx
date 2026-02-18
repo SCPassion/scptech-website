@@ -15,18 +15,18 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-balance text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
-            Latest GitHub Projects
+            Featured Projects
           </h2>
           <p className="mt-4 text-pretty text-xl text-muted-foreground">
-            Synced from @SCPassion by most recently pushed repositories
+            Curated core builds from @SCPassion
           </p>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2">
+        <div className="mt-16 grid grid-cols-1 gap-8 justify-items-center lg:grid-cols-2">
           {projects.map((project) => (
             <Card
               key={project.title}
-              className="overflow-hidden border-2 border-border bg-card modern-shadow-lg hover-color-shift transition-all"
+              className="w-full max-w-2xl overflow-hidden border-2 border-border bg-card modern-shadow-lg hover-color-shift transition-all"
             >
               <div className="aspect-video w-full overflow-hidden bg-muted border-b-2 border-border">
                 <Image
