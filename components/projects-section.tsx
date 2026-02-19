@@ -56,7 +56,17 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
                       {tag}
                     </span>
                   ))}
+                  {project.isBeta ? (
+                    <span className="rounded-lg border border-amber-500/60 bg-amber-500/10 px-3 py-2 text-sm font-bold text-amber-400">
+                      Beta
+                    </span>
+                  ) : null}
                 </div>
+                {project.isBeta && project.cautionNote ? (
+                  <p className="mb-4 rounded-lg border border-amber-500/40 bg-amber-500/10 px-4 py-3 text-sm font-medium text-amber-300">
+                    {project.cautionNote}
+                  </p>
+                ) : null}
                 <div className="flex gap-3">
                   <Button
                     asChild

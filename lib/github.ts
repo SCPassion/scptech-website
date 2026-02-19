@@ -25,6 +25,8 @@ export type GithubProject = {
   image: string;
   githubUrl: string;
   demoUrl?: string;
+  isBeta?: boolean;
+  cautionNote?: string;
 };
 
 type GithubUserApi = {
@@ -92,6 +94,8 @@ const fallbackProjects: GithubProject[] = [
     image: "/SmileChase.png",
     githubUrl: "https://github.com/SCPassion/bark-chase",
     demoUrl: "https://smilechase.scptech.xyz/",
+    isBeta: true,
+    cautionNote: "Beta: Proceed with caution. This project is under development.",
   },
   {
     title: "TrackAny",
@@ -201,6 +205,11 @@ export async function getLatestGithubProjects(
       image: projectImageMap[repo.name] || "/placeholder.svg",
       githubUrl: repo.html_url,
       demoUrl: repo.homepage && repo.homepage.trim() ? repo.homepage : undefined,
+      isBeta: repo.name === "bark-chase",
+      cautionNote:
+        repo.name === "bark-chase"
+          ? "Beta: Proceed with caution. This project is under development."
+          : undefined,
     };
   })
     .filter((project): project is GithubProject => project !== null)
