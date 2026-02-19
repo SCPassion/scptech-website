@@ -2,9 +2,9 @@ const GITHUB_USERNAME = "SCPassion";
 const GITHUB_API_BASE = "https://api.github.com";
 const FEATURED_REPO_ORDER = [
   "pyth-board",
+  "bark-chase",
   "asset-tracking",
   "saga-profolio",
-  "ecommerce-app",
 ];
 
 export type GithubProfile = {
@@ -50,7 +50,8 @@ type GithubRepoApi = {
 
 const projectImageMap: Record<string, string> = {
   "pyth-board": "/pythnetwork.png",
-  "asset-tracking": "/placeholder.svg",
+  "bark-chase": "/SmileChase.png",
+  "asset-tracking": "/TrackAny.png",
   "ecommerce-app": "/ecommerce.png",
   "saga-profolio": "/saga.png",
   vanlife: "/vanlife.png",
@@ -58,6 +59,7 @@ const projectImageMap: Record<string, string> = {
 
 const projectTitleMap: Record<string, string> = {
   "asset-tracking": "TrackAny",
+  "bark-chase": "SmileChase",
 };
 
 const fallbackProfile: GithubProfile = {
@@ -72,12 +74,32 @@ const fallbackProfile: GithubProfile = {
 
 const fallbackProjects: GithubProject[] = [
   {
+    title: "Pyth Board",
+    description:
+      "Pyth Board is a dashboard for tracking Pyth staking positions and monitoring the Pyth Strategic Reserve.",
+    tags: ["TypeScript", "Pyth Network"],
+    status: "Featured",
+    image: "/pythnetwork.png",
+    githubUrl: "https://github.com/SCPassion/pyth-board",
+    demoUrl: "https://pyth.scptech.xyz/",
+  },
+  {
+    title: "SmileChase",
+    description:
+      "Smile Chase is a web game where you tap a dog to bark and burn $CHASE tokens on Fogo mainnet.",
+    tags: ["TypeScript", "Web3"],
+    status: "Featured",
+    image: "/SmileChase.png",
+    githubUrl: "https://github.com/SCPassion/bark-chase",
+    demoUrl: "https://smilechase.scptech.xyz/",
+  },
+  {
     title: "TrackAny",
     description:
       "Asset tracking dashboard for monitoring wallet holdings and portfolio-level changes.",
     tags: ["TypeScript", "Web3"],
     status: "Featured",
-    image: "/placeholder.svg",
+    image: "/TrackAny.png",
     githubUrl: "https://github.com/SCPassion/asset-tracking",
   },
   {
@@ -89,26 +111,6 @@ const fallbackProjects: GithubProject[] = [
     image: "/saga.png",
     githubUrl: "https://github.com/SCPassion/saga-profolio",
     demoUrl: "https://saga.scptech.xyz/",
-  },
-  {
-    title: "Pyth Board",
-    description:
-      "Pyth Board is a dashboard for tracking Pyth staking positions and monitoring the Pyth Strategic Reserve.",
-    tags: ["TypeScript", "Pyth Network"],
-    status: "Featured",
-    image: "/pythnetwork.png",
-    githubUrl: "https://github.com/SCPassion/pyth-board",
-    demoUrl: "https://pyth.scptech.xyz/",
-  },
-  {
-    title: "Ecommerce App",
-    description:
-      "A modern ecommerce web application built with Next.js, TypeScript, and Tailwind CSS.",
-    tags: ["TypeScript", "Next.js"],
-    status: "Featured",
-    image: "/ecommerce.png",
-    githubUrl: "https://github.com/SCPassion/ecommerce-app",
-    demoUrl: "https://ecommerce.scptech.xyz/",
   },
 ];
 
