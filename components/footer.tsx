@@ -12,9 +12,9 @@ export function Footer() {
             </span>
           </Link>
           <p className="mt-4 max-w-md text-lg leading-relaxed text-muted-foreground">
-            Pyth Network and Fogo Chain maxi building monitoring dashboards and
-            onchain analytics. Former Saga Chain ambassador and ex-contributor
-            to NodeStake validator operations.
+            Building custom dashboards for Pyth Network and decentralized
+            applications for Fogo. Former Saga Chain ambassador and
+            ex-contributor to NodeStake validator operations.
           </p>
           <div className="mt-6 flex gap-4">
             <a

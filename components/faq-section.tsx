@@ -10,17 +10,17 @@ export function FAQSection() {
     {
       question: "What is SCPTech?",
       answer:
-        "SCPTech is a Web3 builder brand focused on monitoring dashboards, Oracle Integrity Staking analytics, and blockchain tooling, with strongest alignment to Pyth Network and Fogo Chain.",
+        "SCPTech is a Web3 builder brand focused on custom monitoring dashboards for Pyth Network and decentralized applications for Fogo.",
     },
     {
       question: "What monitoring tools does SCPTech offer?",
       answer:
-        "Projects include dashboards for staking and ecosystem monitoring, plus custom analytics for onchain operations. The goal is to surface useful, real-time signal for operators, contributors, and communities.",
+        "Projects include Pyth-focused dashboards for staking and ecosystem monitoring, plus custom analytics for onchain operations.",
     },
     {
       question: "What ecosystems do you focus on most?",
       answer:
-        "Primary focus is Pyth Network and Fogo Chain. Prior ecosystem experience includes serving as a Saga Chain ambassador and contributing to NodeStake validator efforts.",
+        "Primary focus is Pyth Network for dashboards and Fogo for decentralized applications. Prior ecosystem experience includes serving as a Saga Chain ambassador and contributing to NodeStake validator efforts.",
     },
     {
       question: "How accurate are your monitoring dashboards?",

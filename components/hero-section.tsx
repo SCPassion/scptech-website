@@ -38,10 +38,10 @@ export function HeroSection() {
           </h1>
 
           <p className="mt-6 text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
-            SCPTech develops monitoring dashboards and analytics for oracle and
-            staking ecosystems, with a strong focus on Pyth Network and Fogo
-            Chain. Background includes former Saga Chain ambassadorship and
-            prior contribution to NodeStake validator operations.
+            SCPTech builds custom monitoring dashboards for Pyth Network and
+            decentralized applications for Fogo. Background includes
+            former Saga Chain ambassadorship and prior contribution to
+            NodeStake validator operations.
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -79,8 +79,8 @@ export function HeroSection() {
             </div>
             <h3 className="text-base font-bold">Blockchain Infrastructure</h3>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              Specialized tools for Pyth Network, Fogo Chain, and protocol
-              teams needing reliable onchain monitoring.
+              Decentralized application development for Fogo with a focus on
+              usable product experiences and production-ready delivery.
             </p>
           </div>
 

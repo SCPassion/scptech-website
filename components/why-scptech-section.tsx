@@ -13,7 +13,7 @@ export function WhySCPTechSection() {
       icon: Monitor,
       title: "Fogo Chain Focus",
       description:
-        "Custom dashboards and tooling tailored for Fogo Chain builders and communities that need clear onchain signal.",
+        "Decentralized applications for Fogo with clear onchain signal and user-focused execution.",
     },
     {
       icon: Network,

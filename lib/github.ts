@@ -61,7 +61,7 @@ const projectImageMap: Record<string, string> = {
 
 const projectTitleMap: Record<string, string> = {
   "asset-tracking": "TrackAny",
-  "bark-chase": "SmileChase",
+  "bark-chase": "Smile Chase",
 };
 
 const fallbackProfile: GithubProfile = {
@@ -86,7 +86,7 @@ const fallbackProjects: GithubProject[] = [
     demoUrl: "https://pyth.scptech.xyz/",
   },
   {
-    title: "SmileChase",
+    title: "Smile Chase",
     description:
       "Smile Chase is a web game where you tap a dog to bark and burn $CHASE tokens on Fogo mainnet.",
     tags: ["TypeScript", "Web3"],
@@ -95,7 +95,8 @@ const fallbackProjects: GithubProject[] = [
     githubUrl: "https://github.com/SCPassion/bark-chase",
     demoUrl: "https://smilechase.scptech.xyz/",
     isBeta: true,
-    cautionNote: "Beta: Proceed with caution. This project is under development.",
+    cautionNote:
+      "Live on mainnet. Beta: Proceed with caution while active development continues.",
   },
   {
     title: "TrackAny",
@@ -208,7 +209,7 @@ export async function getLatestGithubProjects(
       isBeta: repo.name === "bark-chase",
       cautionNote:
         repo.name === "bark-chase"
-          ? "Beta: Proceed with caution. This project is under development."
+          ? "Live on mainnet. Beta: Proceed with caution while active development continues."
           : undefined,
     };
   })
