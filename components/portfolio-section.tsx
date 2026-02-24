@@ -41,7 +41,7 @@ export function PortfolioSection({ profile }: PortfolioSectionProps) {
         </div>
 
         <div className="mt-16 flex justify-center">
-          <Card className="w-full max-w-md border-2 border-primary/30 bg-card p-6 modern-shadow-lg hover-color-shift transition-all">
+          <Card className="w-full max-w-md border border-primary/30 bg-card p-6 modern-shadow hover-color-shift transition-colors duration-150 ease-out">
             <div className="mb-4 flex items-start justify-between">
               <div className="h-16 w-16 overflow-hidden rounded border-2 border-primary bg-muted">
                 <Image
@@ -57,7 +57,7 @@ export function PortfolioSection({ profile }: PortfolioSectionProps) {
                   href={contributor.links.github}
                   target="_blank"
                   rel="noreferrer"
-                  className="rounded border-2 border-transparent p-1.5 text-muted-foreground transition-all hover:border-primary hover:text-primary cursor-pointer"
+                  className="rounded border border-transparent p-1.5 text-muted-foreground transition-colors duration-150 ease-out hover:border-primary/40 hover:text-primary cursor-pointer focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2"
                 >
                   <Github className="h-4 w-4" />
                 </a>
@@ -66,7 +66,7 @@ export function PortfolioSection({ profile }: PortfolioSectionProps) {
                     href={contributor.links.twitter}
                     target="_blank"
                     rel="noreferrer"
-                    className="rounded border-2 border-transparent p-1.5 text-muted-foreground transition-all hover:border-primary hover:text-primary cursor-pointer"
+                    className="rounded border border-transparent p-1.5 text-muted-foreground transition-colors duration-150 ease-out hover:border-primary/40 hover:text-primary cursor-pointer focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2"
                   >
                     <Twitter className="h-4 w-4" />
                   </a>

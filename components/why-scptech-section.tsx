@@ -46,9 +46,9 @@ export function WhySCPTechSection() {
           {features.map((feature) => (
             <Card
               key={feature.title}
-              className="border-2 border-primary/20 bg-card p-6 modern-shadow hover-color-shift transition-all"
+              className="border border-primary/20 bg-card p-6 modern-shadow hover-color-shift transition-colors duration-150 ease-out"
             >
-              <div className="mb-4 inline-flex rounded-lg border-2 border-primary bg-primary/10 p-4 hover-color-shift">
+              <div className="mb-4 inline-flex rounded-lg border border-primary/40 bg-primary/10 p-4 hover-color-shift">
                 <feature.icon className="h-8 w-8 text-primary" />
               </div>
               <h3 className="mb-2 text-lg font-bold">{feature.title}</h3>

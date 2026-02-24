@@ -26,7 +26,7 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
           {projects.map((project) => (
             <Card
               key={project.title}
-              className="w-full max-w-2xl overflow-hidden border-2 border-border bg-card modern-shadow-lg hover-color-shift transition-all"
+              className="w-full max-w-2xl overflow-hidden border border-border bg-card modern-shadow hover-color-shift transition-colors duration-150 ease-out"
             >
               <div className="aspect-video w-full overflow-hidden bg-muted border-b-2 border-border">
                 <Image
@@ -40,7 +40,7 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
               <div className="p-6">
                 <div className="mb-3 flex items-center justify-between">
                   <h3 className="text-2xl font-bold">{project.title}</h3>
-                  <span className="rounded-lg border-2 border-primary bg-primary/10 px-4 py-2 text-sm font-bold text-primary">
+                  <span className="rounded-md border border-primary/40 bg-primary/10 px-3 py-1.5 text-sm font-semibold text-primary">
                     {project.status}
                   </span>
                 </div>
@@ -72,7 +72,7 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
                     asChild
                     size="lg"
                     variant="outline"
-                    className="flex-1 border-2 font-bold modern-shadow hover-color-shift transition-all bg-transparent cursor-pointer"
+                    className="flex-1 border font-semibold modern-shadow hover-color-shift transition-colors duration-150 ease-out bg-transparent cursor-pointer focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2"
                   >
                     <a href={project.githubUrl} target="_blank" rel="noreferrer">
                       <Github className="mr-2 h-5 w-5" />
@@ -82,7 +82,7 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
                   <Button
                     asChild
                     size="lg"
-                    className="flex-1 border-2 border-primary font-bold modern-shadow hover-color-shift transition-all cursor-pointer"
+                    className="flex-1 border border-primary font-semibold modern-shadow hover-color-shift transition-colors duration-150 ease-out cursor-pointer focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2"
                   >
                     <a
                       href={project.demoUrl || project.githubUrl}

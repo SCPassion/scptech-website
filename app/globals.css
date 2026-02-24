@@ -10,26 +10,24 @@
   --card-foreground: oklch(0.15 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.15 0 0);
-  /* Changed back to purple theme (290 hue) */
-  --primary: oklch(0.5 0.2 290);
+  --primary: oklch(0.42 0.08 250);
   --primary-foreground: oklch(0.98 0 0);
   --secondary: oklch(0.92 0 0);
   --secondary-foreground: oklch(0.15 0 0);
   --muted: oklch(0.94 0 0);
   --muted-foreground: oklch(0.5 0 0);
-  --accent: oklch(0.6 0.22 280);
+  --accent: oklch(0.5 0.07 235);
   --accent-foreground: oklch(0.98 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.98 0 0);
   --border: oklch(0.88 0 0);
   --input: oklch(0.88 0 0);
-  --ring: oklch(0.5 0.2 290);
+  --ring: oklch(0.42 0.08 250);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  /* Modern rounded corners */
   --radius: 0.5rem;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
@@ -48,20 +46,19 @@
   --card-foreground: oklch(0.95 0 0);
   --popover: oklch(0.15 0 0);
   --popover-foreground: oklch(0.95 0 0);
-  /* Changed back to purple theme (285 hue) */
-  --primary: oklch(0.65 0.22 285);
+  --primary: oklch(0.7 0.08 250);
   --primary-foreground: oklch(0.98 0 0);
   --secondary: oklch(0.22 0 0);
   --secondary-foreground: oklch(0.95 0 0);
   --muted: oklch(0.2 0 0);
   --muted-foreground: oklch(0.6 0 0);
-  --accent: oklch(0.65 0.24 280);
+  --accent: oklch(0.72 0.07 235);
   --accent-foreground: oklch(0.98 0 0);
   --destructive: oklch(0.5 0.2 27);
   --destructive-foreground: oklch(0.98 0 0);
   --border: oklch(0.25 0 0);
   --input: oklch(0.25 0 0);
-  --ring: oklch(0.65 0.22 285);
+  --ring: oklch(0.7 0.08 250);
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
   --chart-3: oklch(0.769 0.188 70.08);
@@ -123,93 +120,61 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground text-lg;
+    @apply bg-background text-foreground text-base;
   }
 
-  /* Larger font sizes for better readability */
   h1 {
-    @apply text-4xl sm:text-5xl lg:text-6xl;
-  }
-
-  h2 {
     @apply text-3xl sm:text-4xl lg:text-5xl;
   }
 
-  h3 {
+  h2 {
     @apply text-2xl sm:text-3xl lg:text-4xl;
   }
 
-  h4 {
+  h3 {
     @apply text-xl sm:text-2xl lg:text-3xl;
   }
 
+  h4 {
+    @apply text-lg sm:text-xl lg:text-2xl;
+  }
+
   p {
-    @apply text-lg sm:text-xl;
-  }
-
-  .text-sm {
-    @apply text-base;
-  }
-
-  .text-xs {
-    @apply text-sm;
+    @apply text-base sm:text-lg;
   }
 }
 
-/* Modern Web3 styling utilities */
 @layer utilities {
-  .glass-effect {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
   .gradient-border {
-    position: relative;
-    background: linear-gradient(45deg, var(--primary), var(--accent));
-    padding: 1px;
+    border: 1px solid color-mix(in oklch, var(--border) 70%, var(--primary) 30%);
     border-radius: var(--radius);
   }
 
-  .gradient-border::before {
-    content: "";
-    position: absolute;
-    inset: 1px;
-    background: var(--background);
-    border-radius: calc(var(--radius) - 1px);
-  }
-
   .modern-shadow {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
   }
 
   .modern-shadow-lg {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-      0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
   }
 
-  /* Hover color shift effect */
   .hover-color-shift {
-    transition: all 0.3s ease;
+    transition:
+      background-color 180ms ease-out,
+      border-color 180ms ease-out,
+      color 180ms ease-out;
   }
 
   .hover-color-shift:hover {
-    border-color: var(--primary);
-    box-shadow: 0 0 0 1px var(--primary);
+    background-color: color-mix(in oklch, var(--muted) 80%, var(--background) 20%);
+    border-color: color-mix(in oklch, var(--border) 70%, var(--primary) 30%);
   }
 
-  .hover-color-shift:hover svg {
-    filter: hue-rotate(15deg) brightness(1.1) saturate(1.2);
-  }
-
-  /* Smooth hover transitions */
   .hover-lift {
-    transition: all 0.2s ease;
+    transition: transform 180ms ease-out;
   }
 
   .hover-lift:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
   }
 }

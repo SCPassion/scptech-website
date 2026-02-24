@@ -65,7 +65,7 @@ export function Header() {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-primary/30 bg-linear-to-r from-background/20 via-background/30 to-background/20 backdrop-blur-xl shadow-lg hover:shadow-xl transition-all duration-500">
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         <div className="flex lg:flex-1 items-center">
           <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-3">
@@ -74,13 +74,11 @@ export function Header() {
               alt="SCPTech Logo"
               width={40}
               height={40}
-              className="rounded-lg hover:scale-110 hover:rotate-3 transition-all duration-300 shadow-lg hover:shadow-primary/20"
+              className="rounded-md border border-border"
             />
-            <span className="text-3xl font-bold tracking-tight bg-linear-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent animate-pulse hover:animate-none hover:bg-linear-to-r hover:from-primary hover:via-accent hover:to-primary hover:scale-105 transition-all duration-500 cursor-pointer">
+            <span className="text-2xl font-semibold tracking-tight text-foreground">
               SCP
-              <span className="text-primary animate-bounce hover:animate-spin hover:text-accent transition-all duration-500">
-                Tech
-              </span>
+              <span className="text-primary">Tech</span>
             </span>
           </Link>
         </div>
@@ -88,7 +86,7 @@ export function Header() {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-foreground hover:bg-primary/10 hover:scale-110 transition-all duration-300 cursor-pointer"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-foreground hover:bg-muted/80 transition-colors duration-150 ease-out cursor-pointer focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <span className="sr-only">Toggle menu</span>
@@ -106,9 +104,9 @@ export function Header() {
               key={item.name}
               href={item.href}
               onClick={(e) => handleSmoothScroll(e, item.href)}
-              className={`text-base font-medium transition-all duration-300 hover:text-primary hover:scale-105 hover:bg-linear-to-r hover:from-primary/10 hover:to-accent/10 hover:border-2 hover:border-primary/50 cursor-pointer px-3 py-2 rounded-lg border hover:shadow-lg hover:shadow-primary/20 ${
+              className={`text-base font-medium transition-colors duration-150 ease-out hover:text-foreground hover:bg-muted/80 cursor-pointer px-3 py-2 rounded-md border focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 ${
                 activeSection === item.href
-                  ? "text-primary border-primary/60 bg-linear-to-r from-primary/15 to-accent/15"
+                  ? "text-foreground border-primary/40 bg-muted"
                   : "text-foreground/80 border-transparent"
               }`}
             >
@@ -120,20 +118,20 @@ export function Header() {
 
       {/* Mobile menu */}
       <div
-        className={`lg:hidden transition-all duration-500 ease-in-out overflow-hidden ${
+        className={`lg:hidden transition-[max-height,opacity,transform] duration-200 ease-out overflow-hidden ${
           mobileMenuOpen
             ? "max-h-96 opacity-100 translate-y-0"
             : "max-h-0 opacity-0 -translate-y-2"
         }`}
       >
         <div
-          className={`space-y-1 px-6 pb-4 pt-2 bg-linear-to-b from-background/95 to-background/90 backdrop-blur-sm transition-all duration-300 ${
+          className={`space-y-1 px-6 pb-4 pt-2 bg-background transition-transform duration-200 ease-out ${
             mobileMenuOpen
               ? "transform translate-y-0"
               : "transform -translate-y-4"
           }`}
         >
-          {navItems.map((item, index) => (
+          {navItems.map((item) => (
             <a
               key={item.name}
               href={item.href}
@@ -141,20 +139,11 @@ export function Header() {
                 handleSmoothScroll(e, item.href);
                 setMobileMenuOpen(false);
               }}
-              className={`block rounded-lg px-3 py-2 text-sm font-medium hover:bg-linear-to-r hover:from-primary/10 hover:to-accent/10 hover:text-primary hover:scale-105 hover:border-2 hover:border-primary/50 transition-all duration-500 cursor-pointer transform ${
+              className={`block rounded-md px-3 py-2 text-sm font-medium hover:bg-muted/80 hover:text-foreground transition-colors duration-150 ease-out cursor-pointer border focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2 ${
                 activeSection === item.href
-                  ? "text-primary border border-primary/60 bg-linear-to-r from-primary/15 to-accent/15"
-                  : "text-foreground/80 border border-transparent"
-              } ${
-                mobileMenuOpen
-                  ? "translate-x-0 translate-y-0 opacity-100 scale-100"
-                  : "translate-x-8 translate-y-2 opacity-0 scale-95"
+                  ? "text-foreground border-primary/40 bg-muted"
+                  : "text-foreground/80 border-transparent"
               }`}
-              style={{
-                transitionDelay: mobileMenuOpen
-                  ? `${index * 150}ms`
-                  : `${(navItems.length - index) * 50}ms`,
-              }}
             >
               {item.name}
             </a>
