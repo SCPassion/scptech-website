@@ -51,7 +51,7 @@ type GithubRepoApi = {
 };
 
 const projectImageMap: Record<string, string> = {
-  "pyth-board": "/pythnetwork.png",
+  "pyth-board": "/pythnetwork_update.png",
   "bark-chase": "/SmileChase.png",
   "asset-tracking": "/TrackAny.png",
   "ecommerce-app": "/ecommerce.png",
@@ -81,7 +81,7 @@ const fallbackProjects: GithubProject[] = [
       "Pyth Board is a dashboard for tracking Pyth staking positions and monitoring the Pyth Strategic Reserve.",
     tags: ["TypeScript", "Pyth Network"],
     status: "Featured",
-    image: "/pythnetwork.png",
+    image: "/pythnetwork_update.png",
     githubUrl: "https://github.com/SCPassion/pyth-board",
     demoUrl: "https://pyth.scptech.xyz/",
   },
