@@ -10,14 +10,15 @@ type PortfolioSectionProps = {
 export function PortfolioSection({ profile }: PortfolioSectionProps) {
   const contributor = {
     name: profile.name,
-    role: "Pyth Network & Fogo Chain Maxi",
+    role: "Full-Stack Developer • AI, Data, and Web3",
     bio: profile.bio,
     avatar: profile.avatarUrl,
     skills: [
       "React.js",
       "Next.js",
       "TypeScript",
-      "Tailwind CSS",
+      "AI Workflows",
+      "Realtime Data",
       "Web3 Development",
       `${profile.publicRepos}+ Public Repos`,
     ],
@@ -25,7 +26,7 @@ export function PortfolioSection({ profile }: PortfolioSectionProps) {
       github: profile.githubUrl,
       twitter: profile.twitterUrl,
     },
-    stats: `${profile.followers} followers • Former Saga ambassador • Ex NodeStake contributor`,
+    stats: `${profile.followers} followers • Austria ↔ Hong Kong • Former Saga ambassador • Ex-NodeStake community contributor`,
   };
 
   return (
@@ -33,10 +34,10 @@ export function PortfolioSection({ profile }: PortfolioSectionProps) {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-balance text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
-            Founder & Developer
+            About Me
           </h2>
           <p className="mt-4 text-pretty text-xl text-muted-foreground">
-            Meet the developer behind SCPTech's Web3 monitoring tools
+            The person behind SCPTech and the projects linked from this site
           </p>
         </div>
 

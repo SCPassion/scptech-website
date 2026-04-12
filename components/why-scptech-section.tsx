@@ -5,27 +5,27 @@ export function WhySCPTechSection() {
   const features = [
     {
       icon: BarChart3,
-      title: "Pyth-First Analytics",
+      title: "About SCPTech",
       description:
-        "Monitoring dashboards for Pyth staking and oracle integrity, with real-time visibility into wallet and reserve performance.",
+        "SCPTech is the umbrella for my independent work across product engineering, open-source builds, and experiments in AI, realtime data, and crypto tooling.",
     },
     {
       icon: Monitor,
-      title: "Fogo Chain Focus",
+      title: "What I Build",
       description:
-        "Decentralized applications for Fogo with clear onchain signal and user-focused execution.",
+        "Most projects sit at the intersection of frontend product surface, backend logic, and execution speed, with a focus on useful interfaces rather than demos for their own sake.",
     },
     {
       icon: Network,
-      title: "Ecosystem Context",
+      title: "Core Domains",
       description:
-        "Experience spans former Saga Chain ambassadorship and ex-contributor work with NodeStake validator operations.",
+        "Current work spans AI-assisted tooling, market-data products, Web3 integration, and oracle or protocol-adjacent systems.",
     },
     {
       icon: Zap,
-      title: "Real-Time Performance",
+      title: "Ecosystem Background",
       description:
-        "High-performance monitoring solutions with low-latency data feeds and instant updates for critical DeFi operations.",
+        "Community experience includes contributing around Pyth and Fogo, former Saga ambassadorship, and prior community-side contribution with NodeStake.",
     },
   ];
 
@@ -34,11 +34,11 @@ export function WhySCPTechSection() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-balance text-xl font-bold tracking-tight sm:text-2xl lg:text-3xl leading-relaxed">
-            Why SCPTech?
+            About SCPTech
           </h2>
           <p className="mt-4 text-pretty text-lg text-muted-foreground leading-relaxed">
-            A Pyth Network and Fogo Chain maxi building practical tools for
-            serious onchain operators
+            A personal builder brand for practical software, public experiments,
+            and protocol-aware product work
           </p>
         </div>
 

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Github, Twitter, Linkedin, Mail } from "lucide-react";
+import { Github, Twitter } from "lucide-react";
 
 export function Footer() {
   return (
@@ -12,9 +12,9 @@ export function Footer() {
             </span>
           </Link>
           <p className="mt-4 max-w-md text-lg leading-relaxed text-muted-foreground">
-            Building custom dashboards for Pyth Network and decentralized
-            applications for Fogo. Former Saga Chain ambassador and
-            ex-contributor to NodeStake validator operations.
+            SCPTech is the personal site of SCPassion, a full-stack builder
+            working across AI-assisted tooling, realtime data products, and
+            Web3 infrastructure.
           </p>
           <div className="mt-6 flex gap-4">
             <a

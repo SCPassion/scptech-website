@@ -10,27 +10,27 @@ export function FAQSection() {
     {
       question: "What is SCPTech?",
       answer:
-        "SCPTech is a Web3 builder brand focused on custom monitoring dashboards for Pyth Network and decentralized applications for Fogo.",
+        "SCPTech is my personal builder brand and project hub. It brings together my work across AI-assisted tooling, realtime data products, and Web3-oriented software.",
     },
     {
-      question: "What monitoring tools does SCPTech offer?",
+      question: "What kind of work do you do?",
       answer:
-        "Projects include Pyth-focused dashboards for staking and ecosystem monitoring, plus custom analytics for onchain operations.",
+        "I build full-stack products end to end, from frontend interfaces and application logic to backend services, deployment loops, and ongoing iteration. A lot of that work touches data-heavy dashboards, automation, and crypto-native workflows.",
     },
     {
-      question: "What ecosystems do you focus on most?",
+      question: "What does SCPTech focus on most?",
       answer:
-        "Primary focus is Pyth Network for dashboards and Fogo for decentralized applications. Prior ecosystem experience includes serving as a Saga Chain ambassador and contributing to NodeStake validator efforts.",
+        "The strongest themes right now are AI workflows, market-data interfaces, Web3 integrations, and protocol-adjacent tooling. The specific projects vary, but the thread is always practical execution and usable product design.",
     },
     {
-      question: "How accurate are your monitoring dashboards?",
+      question: "Which ecosystems or communities have shaped your work?",
       answer:
-        "Our dashboards provide real-time data with high accuracy and low latency. We use direct blockchain data sources and implement robust error handling to ensure reliable monitoring for critical DeFi operations and staking activities.",
+        "My recent context includes Pyth and Fogo, with earlier community experience as a Saga ambassador and ex-NodeStake community contributor.",
     },
     {
-      question: "How can I contribute to SCPTech projects?",
+      question: "Where can I see your work?",
       answer:
-        "We welcome contributions from developers of all skill levels! You can start by exploring our open-source repositories on GitHub.",
+        "This site highlights a few featured builds, and the broader picture lives on GitHub at SCPassion, where I keep active repositories, experiments, and ongoing product work.",
     },
   ];
 
@@ -42,7 +42,7 @@ export function FAQSection() {
             Frequently Asked Questions
           </h2>
           <p className="mt-4 text-pretty text-xl text-muted-foreground">
-            Everything you need to know about SCPTech
+            Quick context on who I am, what SCPTech is, and what I build
           </p>
         </div>
 

@@ -13,8 +13,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "SCPTech - Web3 Technology",
-  description: "Building the future of decentralized technology",
+  title: "SCPTech - About SCPassion",
+  description:
+    "SCPTech is the home of SCPassion, a full-stack builder working across AI workflows, realtime data products, and Web3 infrastructure.",
   generator: "v0.app",
 };
 

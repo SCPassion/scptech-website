@@ -10,9 +10,9 @@ export function Header() {
   const [activeSection, setActiveSection] = useState<string>("#why-scptech");
 
   const navItems = [
-    { name: "Why SCPTech", href: "#why-scptech" },
+    { name: "About SCPTech", href: "#why-scptech" },
     { name: "Projects", href: "#projects" },
-    { name: "Contributor", href: "#portfolio" },
+    { name: "About Me", href: "#portfolio" },
     { name: "FAQ", href: "#faq" },
   ];
 

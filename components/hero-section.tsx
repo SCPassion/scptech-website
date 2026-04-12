@@ -26,21 +26,20 @@ export function HeroSection() {
         <div className="mx-auto max-w-3xl text-center">
           <div className="mb-8 inline-flex items-center gap-2 rounded-lg border-2 border-primary bg-primary/10 px-4 py-2 text-sm font-bold text-primary modern-shadow hover-color-shift">
             <Zap className="h-4 w-4" />
-            <span>Pyth Network & Fogo Chain Focused Builder</span>
+            <span>Austria ↔ Hong Kong • Full-Stack Builder</span>
           </div>
 
           <h1 className="text-balance text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl leading-tight">
-            Building for{" "}
-            <span className="text-primary">
-              Pyth, Fogo, and High-Performance Web3
-            </span>
+            Building practical software where{" "}
+            <span className="text-primary">AI, realtime data, and Web3</span>{" "}
+            meet
           </h1>
 
           <p className="mt-6 text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
-            SCPTech builds custom monitoring dashboards for Pyth Network and
-            decentralized applications for Fogo. Background includes
-            former Saga Chain ambassadorship and prior contribution to
-            NodeStake validator operations.
+            SCPTech is my home base on the web. I build product surfaces,
+            backend logic, and fast-moving tools across AI-assisted workflows,
+            market-data interfaces, and crypto infrastructure, with community
+            experience spanning Pyth, Fogo, Saga, and NodeStake.
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -53,7 +52,7 @@ export function HeroSection() {
                 size="lg"
                 className="group border border-primary font-semibold text-base modern-shadow hover-color-shift transition-colors duration-150 ease-out cursor-pointer focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2"
               >
-                Explore Latest GitHub Builds
+                Explore My Work
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </a>
@@ -65,10 +64,10 @@ export function HeroSection() {
             <div className="mb-4 rounded-lg border-2 border-primary bg-primary/10 p-4 hover-color-shift">
               <Code2 className="h-8 w-8 text-primary" />
             </div>
-            <h3 className="text-base font-bold">Monitoring Dashboards</h3>
+            <h3 className="text-base font-bold">Full-Stack Execution</h3>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              Oracle and staking analytics focused on actionable signal, wallet
-              performance, and ecosystem health.
+              Shipping from interface and product logic through backend
+              services, deployment, iteration, and maintenance.
             </p>
           </div>
 
@@ -76,10 +75,10 @@ export function HeroSection() {
             <div className="mb-4 rounded-lg border-2 border-accent bg-accent/10 p-4 hover-color-shift">
               <Blocks className="h-8 w-8 text-accent" />
             </div>
-            <h3 className="text-base font-bold">Blockchain Infrastructure</h3>
+            <h3 className="text-base font-bold">AI + Data Products</h3>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              Decentralized application development for Fogo with a focus on
-              usable product experiences and production-ready delivery.
+              Building agent workflows, automation, and market-data surfaces
+              that make complex information easier to inspect and act on.
             </p>
           </div>
 
@@ -87,10 +86,10 @@ export function HeroSection() {
             <div className="mb-4 rounded-lg border-2 border-primary bg-primary/10 p-4 hover-color-shift">
               <Zap className="h-8 w-8 text-primary" />
             </div>
-            <h3 className="text-base font-bold">Ecosystem Experience</h3>
+            <h3 className="text-base font-bold">Web3 Context</h3>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              Former Saga Chain ambassador and ex-contributor to NodeStake
-              validator, with practical cross-ecosystem context.
+              Practical experience across protocol-facing workflows, wallets,
+              token flows, oracle integrations, and onchain product execution.
             </p>
           </div>
         </div>

@@ -66,10 +66,10 @@ const projectTitleMap: Record<string, string> = {
 
 const fallbackProfile: GithubProfile = {
   name: "SCP",
-  bio: "Creator of SCPTech, Pyth & Fogo builder, Full-Stack Developer focused on React, Next.js, TypeScript, and Tailwind CSS.",
+  bio: "Full-stack developer building practical software where AI workflows, realtime data, and crypto infrastructure meet.",
   avatarUrl: "/pythenianNFT.jpg",
   githubUrl: "https://github.com/SCPassion",
-  twitterUrl: "https://x.com/KaiCryptohk",
+  twitterUrl: "https://x.com/scp_web3",
   publicRepos: 69,
   followers: 8,
 };
@@ -191,7 +191,7 @@ export async function getLatestGithubProjects(
       .map((repo) => [repo.name, repo])
   );
 
-  const projects = FEATURED_REPO_ORDER.map((repoName) => {
+  const projects = FEATURED_REPO_ORDER.map<GithubProject | null>((repoName) => {
     const repo = repoMap.get(repoName);
 
     if (!repo) {
