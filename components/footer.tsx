@@ -1,44 +1,90 @@
-import Link from "next/link";
-import { Github, Twitter } from "lucide-react";
+"use client";
+
+import { useEffect, useState } from "react";
+
+function useLiveClock() {
+  const [time, setTime] = useState<string>("");
+
+  useEffect(() => {
+    const fmt = () => {
+      const now = new Date();
+      return now.toUTCString().split(" ")[4] + " UTC";
+    };
+    setTime(fmt());
+    const id = setInterval(() => setTime(fmt()), 1000);
+    return () => clearInterval(id);
+  }, []);
+
+  return time;
+}
 
 export function Footer() {
-  return (
-    <footer className="border-t border-border/40 bg-background">
-      <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
-        <div className="flex flex-col items-center justify-center text-center">
-          <Link href="/" className="inline-block">
-            <span className="text-3xl font-bold tracking-tight">
-              SCP<span className="text-primary">Tech</span>
-            </span>
-          </Link>
-          <p className="mt-4 max-w-md text-lg leading-relaxed text-muted-foreground">
-            SCPTech is the personal site of SCPassion, a full-stack builder
-            working across AI-assisted tooling, realtime data products, and
-            Web3 infrastructure.
-          </p>
-          <div className="mt-6 flex gap-4">
-            <a
-              href="https://github.com/SCPassion"
-              target="_blank"
-              className="rounded-md p-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground cursor-pointer"
-            >
-              <Github className="h-5 w-5" />
-            </a>
-            <a
-              href="https://x.com/KaiCryptohk"
-              target="_blank"
-              className="rounded-md p-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground cursor-pointer"
-            >
-              <Twitter className="h-5 w-5" />
-            </a>
-          </div>
-        </div>
+  const clock = useLiveClock();
 
-        <div className="mt-8 border-t border-border/40 pt-8">
-          <p className="text-center text-base text-muted-foreground">
-            © {new Date().getFullYear()} SCPTech. All rights reserved.
-          </p>
-        </div>
+  return (
+    <footer
+      className="fixed bottom-0 left-0 right-0 z-50 flex flex-wrap justify-between items-center px-4 py-2 gap-2"
+      style={{
+        background: "#0E0E0E",
+        borderTop: "1px solid rgba(59,73,75,0.25)",
+        fontFamily: "var(--font-mono), 'JetBrains Mono', monospace",
+        fontSize: "9px",
+        letterSpacing: "0.05em",
+        textTransform: "uppercase",
+      }}
+    >
+      {/* Left cluster */}
+      <div className="flex items-center gap-5">
+        <span style={{ color: "rgba(0,240,255,0.35)" }}>
+          ©2024 SCPTECH.TERMINAL // STATUS: ENCRYPTED
+        </span>
+        <span
+          className="hidden md:inline"
+          style={{ color: "#00F0FF" }}
+        >
+          DATA_STREAM: ACTIVE
+        </span>
+        <span
+          className="hidden md:inline"
+          style={{ color: "#00F0FF" }}
+        >
+          LATENCY: 14MS
+        </span>
+      </div>
+
+      {/* Right cluster */}
+      <div className="flex items-center gap-5">
+        <a
+          href="https://github.com/SCPassion"
+          target="_blank"
+          rel="noreferrer"
+          className="footer-link"
+        >
+          GITHUB
+        </a>
+        <a
+          href="https://x.com/KaiCryptohk"
+          target="_blank"
+          rel="noreferrer"
+          className="footer-link footer-link-violet hidden md:inline"
+        >
+          X.COM
+        </a>
+        <span
+          className="flex items-center gap-1.5"
+          style={{ color: "rgba(0,240,255,0.5)" }}
+        >
+          <span
+            className="w-1 h-1 rounded-full animate-pulse"
+            style={{ background: "#00F0FF" }}
+          />
+          UPLINK_STABLE
+        </span>
+        {clock && (
+          <span style={{ color: "#00F0FF", fontWeight: 700 }}>
+            CLOCK: {clock}
+          </span>
+        )}
       </div>
     </footer>
   );
