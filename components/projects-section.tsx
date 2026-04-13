@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import type { GithubProject } from "@/lib/github";
 
@@ -5,10 +8,16 @@ type ProjectsSectionProps = {
   projects: GithubProject[];
 };
 
-const projectIds = ["PRJ_001", "PRJ_002", "PRJ_003", "PRJ_004"];
-const projectAccents = ["cyan", "violet", "cyan", "violet"];
+const projectIds = ["PRJ_001", "PRJ_002", "PRJ_003", "PRJ_004", "PRJ_005", "PRJ_006"];
+const projectAccents = ["cyan", "violet", "cyan", "violet", "cyan", "violet"];
+
+type Tab = "web3" | "ai";
 
 export function ProjectsSection({ projects }: ProjectsSectionProps) {
+  const [activeTab, setActiveTab] = useState<Tab>("web3");
+
+  const filtered = projects.filter((p) => (p.category ?? "web3") === activeTab);
+
   return (
     <section
       id="projects"
@@ -44,17 +53,43 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
               </div>
             </div>
           </div>
-          <span
-            className="text-[10px] hidden md:block"
-            style={{ color: "rgba(0,240,255,0.4)", fontFamily: "var(--font-mono), monospace" }}
-          >
-            ENTRIES_FOUND: {String(projects.length).padStart(2, "0")}
-          </span>
+
+          {/* Tab toggle */}
+          <div className="flex items-center gap-1">
+            <button
+              type="button"
+              onClick={() => setActiveTab("web3")}
+              className="px-4 py-1.5 text-[10px] font-bold tracking-widest transition-all duration-200"
+              style={{
+                fontFamily: "var(--font-mono), monospace",
+                background: activeTab === "web3" ? "rgba(0,240,255,0.08)" : "transparent",
+                border: `1px solid ${activeTab === "web3" ? "#00F0FF" : "rgba(59,73,75,0.5)"}`,
+                color: activeTab === "web3" ? "#00F0FF" : "rgba(255,255,255,0.3)",
+                cursor: "pointer",
+              }}
+            >
+              WEB3
+            </button>
+            <button
+              type="button"
+              onClick={() => setActiveTab("ai")}
+              className="px-4 py-1.5 text-[10px] font-bold tracking-widest transition-all duration-200"
+              style={{
+                fontFamily: "var(--font-mono), monospace",
+                background: activeTab === "ai" ? "rgba(188,0,255,0.08)" : "transparent",
+                border: `1px solid ${activeTab === "ai" ? "#BC00FF" : "rgba(59,73,75,0.5)"}`,
+                color: activeTab === "ai" ? "#BC00FF" : "rgba(255,255,255,0.3)",
+                cursor: "pointer",
+              }}
+            >
+              SIDE_PROJECTS
+            </button>
+          </div>
         </div>
 
         {/* Project grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {projects.map((project, i) => {
+          {filtered.map((project, i) => {
             const accent = projectAccents[i % projectAccents.length];
             const filename = project.title.replace(/\s+/g, "_").toUpperCase();
             const accentColor = accent === "violet" ? "#BC00FF" : "#00F0FF";
@@ -192,14 +227,16 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
 
                   {/* Action buttons */}
                   <div className="flex gap-3">
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="btn-action-ghost"
-                    >
-                      VIEW_CODE
-                    </a>
+                    {!project.isPrivate && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="btn-action-ghost"
+                      >
+                        VIEW_CODE
+                      </a>
+                    )}
                     {project.demoUrl ? (
                       <a
                         href={project.demoUrl}
@@ -225,6 +262,16 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
             );
           })}
         </div>
+
+        {/* Empty state */}
+        {filtered.length === 0 && (
+          <div
+            className="text-center py-20"
+            style={{ color: "rgba(0,240,255,0.3)", fontFamily: "var(--font-mono), monospace", fontSize: "12px" }}
+          >
+            NO_ENTRIES_FOUND // MORE COMING SOON
+          </div>
+        )}
       </div>
     </section>
   );

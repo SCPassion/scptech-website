@@ -1,6 +1,7 @@
 const GITHUB_USERNAME = "SCPassion";
 const GITHUB_API_BASE = "https://api.github.com";
 const FEATURED_REPO_ORDER = [
+  "koto-ai",
   "pyth-board",
   "bark-chase",
   "asset-tracking",
@@ -27,6 +28,8 @@ export type GithubProject = {
   demoUrl?: string;
   isBeta?: boolean;
   cautionNote?: string;
+  category?: "web3" | "ai";
+  isPrivate?: boolean;
 };
 
 type GithubUserApi = {
@@ -51,6 +54,7 @@ type GithubRepoApi = {
 };
 
 const projectImageMap: Record<string, string> = {
+  "koto-ai": "/koto.png",
   "pyth-board": "/pythnetwork_update.png",
   "bark-chase": "/SmileChase.png",
   "asset-tracking": "/TrackAny.png",
@@ -60,6 +64,7 @@ const projectImageMap: Record<string, string> = {
 };
 
 const projectTitleMap: Record<string, string> = {
+  "koto-ai": "Koto AI",
   "asset-tracking": "TrackAny",
   "bark-chase": "Smile Chase",
 };
@@ -76,6 +81,18 @@ const fallbackProfile: GithubProfile = {
 
 const fallbackProjects: GithubProject[] = [
   {
+    title: "Koto AI",
+    description:
+      "Koto AI helps users learn Japanese through an interactive, AI-powered learning platform. Personalized companion experience with vocabulary, grammar, and real-time adaptive feedback.",
+    tags: ["TypeScript", "AI"],
+    status: "Featured",
+    image: "/koto.png",
+    githubUrl: "https://github.com/SCPassion/koto-ai",
+    demoUrl: "https://kotoai.scptech.xyz",
+    category: "ai",
+    isPrivate: true,
+  },
+  {
     title: "Pyth Board",
     description:
       "Pyth Board is a dashboard for tracking Pyth staking positions and monitoring the Pyth Strategic Reserve.",
@@ -84,6 +101,7 @@ const fallbackProjects: GithubProject[] = [
     image: "/pythnetwork_update.png",
     githubUrl: "https://github.com/SCPassion/pyth-board",
     demoUrl: "https://pyth.scptech.xyz/",
+    category: "web3",
   },
   {
     title: "Smile Chase",
@@ -97,6 +115,7 @@ const fallbackProjects: GithubProject[] = [
     isBeta: true,
     cautionNote:
       "Live on mainnet. Beta: Proceed with caution while active development continues.",
+    category: "web3",
   },
   {
     title: "TrackAny",
@@ -106,6 +125,7 @@ const fallbackProjects: GithubProject[] = [
     status: "Featured",
     image: "/TrackAny.png",
     githubUrl: "https://github.com/SCPassion/asset-tracking",
+    category: "web3",
   },
   {
     title: "Saga Profolio",
@@ -116,6 +136,7 @@ const fallbackProjects: GithubProject[] = [
     image: "/saga.png",
     githubUrl: "https://github.com/SCPassion/saga-profolio",
     demoUrl: "https://saga.scptech.xyz/",
+    category: "web3",
   },
 ];
 
@@ -175,7 +196,7 @@ export async function getGithubProfile(): Promise<GithubProfile> {
 }
 
 export async function getLatestGithubProjects(
-  limit = 4
+  limit = 5
 ): Promise<GithubProject[]> {
   const data = await fetchGithub<GithubRepoApi[]>(
     `/users/${GITHUB_USERNAME}/repos?per_page=100&sort=updated`
@@ -191,11 +212,15 @@ export async function getLatestGithubProjects(
       .map((repo) => [repo.name, repo])
   );
 
+  const fallbackMap = new Map(
+    fallbackProjects.map((p) => [p.githubUrl.split("/").pop()!, p])
+  );
+
   const projects = FEATURED_REPO_ORDER.map<GithubProject | null>((repoName) => {
     const repo = repoMap.get(repoName);
 
     if (!repo) {
-      return null;
+      return fallbackMap.get(repoName) ?? null;
     }
 
     return {
@@ -205,7 +230,13 @@ export async function getLatestGithubProjects(
       status: toStatusFromPushedAt(repo.pushed_at),
       image: projectImageMap[repo.name] || "/placeholder.svg",
       githubUrl: repo.html_url,
-      demoUrl: repo.homepage && repo.homepage.trim() ? repo.homepage : undefined,
+      demoUrl:
+        repo.name === "koto-ai"
+          ? "https://kotoai.scptech.xyz"
+          : repo.homepage && repo.homepage.trim()
+          ? repo.homepage
+          : undefined,
+      category: repo.name === "koto-ai" ? "ai" : "web3",
       isBeta: repo.name === "bark-chase",
       cautionNote:
         repo.name === "bark-chase"
